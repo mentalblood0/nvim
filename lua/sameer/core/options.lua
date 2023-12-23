@@ -1,0 +1,32 @@
+local opt = vim.opt
+
+opt.laststatus = 0
+opt.cmdheight = 0
+opt.fillchars = "eob: ,vert: "
+opt.foldenable = false
+opt.autoindent = true
+opt.backspace = "indent,eol,start"
+opt.clipboard:append("unnamedplus")
+opt.cursorline = true
+opt.expandtab = true
+opt.foldmethod = "expr"
+opt.foldexpr = "nvim_treesitter#foldexpr()"
+opt.ignorecase = true
+opt.mouse = ""
+opt.number = false
+opt.relativenumber = false
+opt.shiftwidth = 2
+opt.showmode = false
+opt.signcolumn = "yes"
+opt.smartcase = true
+opt.smartindent = true
+opt.spelllang = { "en" }
+opt.splitbelow = true
+opt.splitright = true
+opt.swapfile = false
+opt.tabstop = 2
+opt.termguicolors = true
+opt.undodir = vim.env.HOME .. "/.undodir"
+opt.undofile = true
+opt.undolevels = 100
+opt.wrap = true
