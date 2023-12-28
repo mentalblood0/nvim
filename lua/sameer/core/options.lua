@@ -1,5 +1,11 @@
 local opt = vim.opt
 
+vim.o.autoread = true
+vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
+	command = "if mode() != 'c' | checktime | endif",
+	pattern = { "*" },
+})
+
 opt.laststatus = 0
 opt.cmdheight = 0
 opt.fillchars = "eob: ,vert: "
