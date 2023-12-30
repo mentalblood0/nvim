@@ -59,6 +59,16 @@ return {
 			{ desc = "Find string in current buffer" }
 		)
 
+		keymap.set("n", "<leader>fgc", "<cmd>Telescope git_commits<cr>", { desc = "Find commits" })
+		keymap.set(
+			"n",
+			"<leader>fgC",
+			"<cmd>Telescope git_bcommits<cr>",
+			{ desc = "Find commits related to current buffer" }
+		)
+		keymap.set("n", "<leader>fgs", "<cmd>Telescope git_status<cr>", { desc = "Find changes since previous commit" })
+		keymap.set("n", "<leader>fgb", "<cmd>Telescope git_branches<cr>", { desc = "Find branches" })
+
 		keymap.set("n", "<leader>fc", "<cmd>Telescope neoclip<cr>", { desc = "Find clip" })
 		keymap.set("n", "<leader>fe", "<cmd>Telescope diagnostics<cr>", { desc = "Find diagnostics" })
 		keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find buffers" })
