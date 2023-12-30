@@ -69,6 +69,25 @@ return {
 		keymap.set("n", "<leader>fgs", "<cmd>Telescope git_status<cr>", { desc = "Find changes since previous commit" })
 		keymap.set("n", "<leader>fgb", "<cmd>Telescope git_branches<cr>", { desc = "Find branches" })
 
+		keymap.set(
+			"n",
+			"<leader>flr",
+			"<cmd>Telescope lsp_references<cr>",
+			{ desc = "Find LSP references for word under cursor" }
+		)
+		keymap.set(
+			"n",
+			"<leader>fld",
+			"<cmd>Telescope lsp_definitions<cr>",
+			{ desc = "Find LSP definitions for word under cursor" }
+		)
+		keymap.set(
+			"n",
+			"<leader>flt",
+			"<cmd>Telescope lsp_type_definitions<cr>",
+			{ desc = "Find LSP type definitions for word under cursor" }
+		)
+
 		keymap.set("n", "<leader>fc", "<cmd>Telescope neoclip<cr>", { desc = "Find clip" })
 		keymap.set("n", "<leader>fe", "<cmd>Telescope diagnostics<cr>", { desc = "Find diagnostics" })
 		keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find buffers" })
