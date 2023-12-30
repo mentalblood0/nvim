@@ -8,7 +8,6 @@ return {
 	config = function()
 		local telescope = require("telescope")
 		local actions = require("telescope.actions")
-		local trouble = require("trouble.providers.telescope")
 
 		telescope.setup({
 			defaults = {
@@ -24,9 +23,7 @@ return {
 						["<C-k>"] = actions.move_selection_previous,
 						["<C-j>"] = actions.move_selection_next,
 						["<CR>"] = actions.select_default,
-						["<C-t>"] = trouble.open_with_trouble,
 					},
-					n = { ["<C-t>"] = trouble.open_with_trouble },
 				},
 			},
 		})
