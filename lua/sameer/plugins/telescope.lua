@@ -8,6 +8,7 @@ return {
 	config = function()
 		local telescope = require("telescope")
 		local actions = require("telescope.actions")
+		local trouble = require("trouble.providers.telescope")
 
 		telescope.setup({
 			defaults = {
@@ -23,7 +24,9 @@ return {
 						["<C-k>"] = actions.move_selection_previous,
 						["<C-j>"] = actions.move_selection_next,
 						["<CR>"] = actions.select_default,
+						["<C-t>"] = trouble.open_with_trouble,
 					},
+					n = { ["<C-t>"] = trouble.open_with_trouble },
 				},
 			},
 		})
@@ -54,6 +57,24 @@ return {
 		)
 
 		keymap.set("n", "<leader>fc", "<cmd>Telescope neoclip<cr>", { desc = "Find clip" })
+		keymap.set("n", "<leader>fe", "<cmd>Telescope diagnostics<cr>", { desc = "Find diagnostics" })
 		keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find buffers" })
+
+		local add_all_files_to_buffers = function()
+			local initial = vim.fn.expand("%")
+			local root = vim.fn.getcwd()
+			local paths = vim.split(vim.fn.glob(root .. "/**/*"), "\n", { trimempty = true })
+			for _, p in pairs(paths) do
+				if
+					vim.fn.isdirectory(p) == 0
+					and string.find(p, "/.", 1, true) == nil
+					and string.find(p, "CMakeFiles", 1, true) == nil
+				then
+					vim.cmd.edit(p)
+				end
+			end
+			vim.cmd.edit(initial)
+		end
+		keymap.set("n", "<leader>ff", add_all_files_to_buffers, { desc = "Add all files to buffers" })
 	end,
 }
