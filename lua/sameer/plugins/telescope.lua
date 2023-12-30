@@ -48,6 +48,12 @@ return {
 		keymap.set("n", "<leader>fs", "<cmd>Telescope lsp_document_symbols<cr>", { desc = "Find symbols in the file" })
 		keymap.set(
 			"n",
+			"<leader>fS",
+			"<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
+			{ desc = "Find symbols in workspace" }
+		)
+		keymap.set(
+			"n",
 			"<leader>fd",
 			"<cmd>Telescope current_buffer_fuzzy_find<cr>",
 			{ desc = "Find string in current buffer" }
