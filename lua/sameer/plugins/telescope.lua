@@ -10,6 +10,11 @@ return {
 		local actions = require("telescope.actions")
 
 		telescope.setup({
+			pickers = {
+				colorscheme = {
+					enable_preview = true,
+				},
+			},
 			defaults = {
 				layout_strategy = "vertical",
 				sorting_strategy = "ascending",
@@ -89,6 +94,7 @@ return {
 		)
 
 		keymap.set("n", "<leader>fc", "<cmd>Telescope neoclip<cr>", { desc = "Find clip" })
+		keymap.set("n", "<leader>ft", "<cmd>Telescope colorscheme<cr>", { desc = "Find colorscheme" })
 		keymap.set("n", "<leader>fe", "<cmd>Telescope diagnostics<cr>", { desc = "Find diagnostics" })
 		keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find buffers" })
 
