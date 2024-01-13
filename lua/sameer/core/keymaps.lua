@@ -2,7 +2,6 @@ local keymap = vim.keymap
 
 vim.g.mapleader = " "
 
-keymap.set("n", "0", "^", { desc = "Goto first non empty character in line" })
 keymap.set("n", "<CR>", "I<CR><ESC>ka", { desc = "Insert a new line inplace" })
 keymap.set("n", "<leader><CR>", "<M-o>", { desc = "Insert a new line below" })
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
