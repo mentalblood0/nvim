@@ -27,7 +27,7 @@ return {
 					i = {
 						["<C-k>"] = actions.move_selection_previous,
 						["<C-j>"] = actions.move_selection_next,
-						["<CR>"] = actions.select_default,
+						["<CR>"] = actions.select_default + actions.center,
 					},
 				},
 			},
