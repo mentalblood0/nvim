@@ -17,3 +17,5 @@ keymap.set("n", ":", ":set nu<CR>:", { desc = "Toggle line numbers on command li
 keymap.set("c", "<CR>", "<CR>:set nonu<CR>", { desc = "Toggle line numbers on command line mode exit" })
 keymap.set("c", "<ESC>", "<ESC>:set nonu<CR>", { desc = "Toggle line numbers on command line mode exit" })
 keymap.set("n", "G", "Gzz", { desc = "Go to the end of the file and center" })
+keymap.set("n", "n", "nzz", { desc = "Go to next match and center" })
+keymap.set("n", "N", "Nzz", { desc = "Go to previous match and center" })
