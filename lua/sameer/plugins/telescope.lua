@@ -21,13 +21,13 @@ return {
 				path_display = { "truncate " },
 				file_ignore_patterns = { "node_modules", "__pycache__", "build", "CMakeFiles" },
 				layout_config = {
-					width = { 0.75, max = 100 },
+					width = { 0.9, max = 124 },
 				},
 				mappings = {
 					i = {
 						["<C-k>"] = actions.move_selection_previous,
 						["<C-j>"] = actions.move_selection_next,
-						["<CR>"] = actions.select_default,
+						["<CR>"] = actions.select_default + actions.center,
 					},
 				},
 			},

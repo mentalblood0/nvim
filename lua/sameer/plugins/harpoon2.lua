@@ -35,5 +35,14 @@ return {
 		vim.keymap.set("n", "7", function()
 			harpoon:list():select(7)
 		end)
+		vim.keymap.set("n", "8", function()
+			harpoon:list():select(8)
+		end)
+		vim.keymap.set("n", "9", function()
+			harpoon:list():select(9)
+		end)
+		vim.keymap.set("n", "0", function()
+			harpoon:list():select(10)
+		end)
 	end,
 }
