@@ -98,21 +98,50 @@ return {
 		keymap.set("n", "<leader>fe", "<cmd>Telescope diagnostics<cr>", { desc = "Find diagnostics" })
 		keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find buffers" })
 
-		local add_all_files_to_buffers = function()
+		local file_exists = function(file)
+			local f = io.open(file, "rb")
+			if f then
+				f:close()
+			else
+				print(file .. " not exists")
+			end
+			return f ~= nil
+		end
+
+		local lines_from = function(file)
+			if not file_exists(file) then
+				return {}
+			end
+			local lines = {}
+			for line in io.lines(file) do
+				lines[#lines + 1] = line
+			end
+			return lines
+		end
+
+		local add_files_to_buffers = function()
 			local initial = vim.fn.expand("%")
 			local root = vim.fn.getcwd()
-			local paths = vim.split(vim.fn.glob(root .. "/**/*"), "\n", { trimempty = true })
-			for _, p in pairs(paths) do
-				if
-					vim.fn.isdirectory(p) == 0
-					and string.find(p, "/.", 1, true) == nil
-					and string.find(p, "CMakeFiles", 1, true) == nil
-				then
-					vim.cmd.edit(p)
+
+			local paths_expressions = lines_from(root .. "/nvim_open.txt")
+			local paths = {}
+			for _, _e in pairs(paths_expressions) do
+				local e = root .. "/" .. _e
+				print("searching files matching expression " .. e)
+				for _, p in pairs(vim.split(vim.fn.glob(e), "\n", { trimempty = true })) do
+					if vim.fn.isdirectory(p) == 0 and string.find(p, "CMakeFiles", 1, true) == nil then
+						print("found file matching expression " .. e .. " : " .. p)
+						paths[#paths + 1] = p
+					end
 				end
 			end
+
+			for _, p in pairs(paths) do
+				vim.cmd.edit(p)
+			end
+
 			vim.cmd.edit(initial)
 		end
-		keymap.set("n", "<leader>ff", add_all_files_to_buffers, { desc = "Add all files to buffers" })
+		keymap.set("n", "<leader>ff", add_files_to_buffers, { desc = "Add all files to buffers" })
 	end,
 }
