@@ -102,8 +102,6 @@ return {
 			local f = io.open(file, "rb")
 			if f then
 				f:close()
-			else
-				print(file .. " not exists")
 			end
 			return f ~= nil
 		end
@@ -123,15 +121,15 @@ return {
 			local initial = vim.fn.expand("%")
 			local root = vim.fn.getcwd()
 
-			local paths_expressions = lines_from(root .. "/nvim_open.txt")
+			local paths_expressions = lines_from(root .. "/nvim_open.sh")
 			local paths = {}
 			for _, _e in pairs(paths_expressions) do
-				local e = root .. "/" .. _e
-				print("searching files matching expression " .. e)
-				for _, p in pairs(vim.split(vim.fn.glob(e), "\n", { trimempty = true })) do
-					if vim.fn.isdirectory(p) == 0 and string.find(p, "CMakeFiles", 1, true) == nil then
-						print("found file matching expression " .. e .. " : " .. p)
-						paths[#paths + 1] = p
+				if _e.sub(1, #"#") ~= "#" then
+					local e = root .. "/" .. _e
+					for _, p in pairs(vim.split(vim.fn.glob(e), "\n", { trimempty = true })) do
+						if vim.fn.isdirectory(p) == 0 and string.find(p, "CMakeFiles", 1, true) == nil then
+							paths[#paths + 1] = p
+						end
 					end
 				end
 			end
