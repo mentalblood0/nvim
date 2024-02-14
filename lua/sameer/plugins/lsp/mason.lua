@@ -28,7 +28,7 @@ return {
 				"emmet_ls",
 				"pyright",
 				"graphql",
-				"clangd",
+				-- "clangd",
 			},
 			automatic_installation = true,
 		})

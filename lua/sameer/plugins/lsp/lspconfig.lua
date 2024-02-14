@@ -125,5 +125,16 @@ return {
 			on_attach = on_attach,
 			filetypes = { "c", "cpp", "objc", "objcpp" },
 		})
+		-- lspconfig["ccls"].setup({
+		-- 	init_options = {
+		-- 		compilationDatabaseDirectory = "build",
+		-- 		index = {
+		-- 			threads = 4,
+		-- 		},
+		-- 		clang = {
+		-- 			excludeArgs = { "-frounding-math" },
+		-- 		},
+		-- 	},
+		-- })
 	end,
 }
