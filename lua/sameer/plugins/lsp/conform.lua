@@ -16,7 +16,7 @@ return {
 			scss = { "prettierd" },
 			graphql = { "prettierd" },
 			markdown = { "prettierd" },
-			python = { "isort", "autopep8 --aggressive --aggressive" },
+			python = { "isort", "autopep8 --aggressive --aggressive --maxi-line-length 120" },
 			cpp = { "clang-format" },
 			["_"] = { "trim_whitespace", "codespell" },
 		},
