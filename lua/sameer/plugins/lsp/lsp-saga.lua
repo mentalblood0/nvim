@@ -56,6 +56,6 @@ return {
 		keymap.set("n", "<leader>lf", "<cmd>Lspsaga finder<CR>", opts)
 
 		opts.desc = "Go to next diagnostic information"
-		keymap.set("n", "<leader>le", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
+		keymap.set("n", "<leader>le", "<cmd>Lspsaga diagnostic_jump_next<CR>zz", opts)
 	end,
 }

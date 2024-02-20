@@ -18,7 +18,7 @@ return {
 			markdown = { "prettierd" },
 			python = { "isort", "black" },
 			cpp = { "clang-format" },
-			["_"] = { "trim_whitespace" },
+			["_"] = { "trim_whitespace", "codespell" },
 		},
 		format_on_save = {
 			lsp_fallback = true,
