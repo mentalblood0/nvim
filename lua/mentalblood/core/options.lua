@@ -13,7 +13,7 @@ opt.foldenable = false
 opt.autoindent = true
 opt.backspace = "indent,eol,start"
 opt.clipboard:append("unnamedplus")
-opt.cursorline = true
+opt.cursorline = false
 opt.expandtab = true
 opt.foldmethod = "expr"
 opt.foldexpr = "nvim_treesitter#foldexpr()"
@@ -34,5 +34,5 @@ opt.tabstop = 2
 opt.termguicolors = false
 opt.undodir = vim.env.HOME .. "/.undodir"
 opt.undofile = true
-opt.undolevels = 100
+opt.undolevels = 10000
 opt.wrap = true
