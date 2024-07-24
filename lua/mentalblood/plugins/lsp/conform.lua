@@ -14,11 +14,10 @@ return {
 			ejs = { "prettierd" },
 			css = { "prettierd" },
 			scss = { "prettierd" },
-			graphql = { "prettierd" },
 			markdown = { "prettierd" },
 			python = { "isort", "black" },
 			cpp = { "clang-format" },
-			["_"] = { "trim_whitespace", "codespell" },
+			["_"] = { "trim_whitespace" },
 		},
 		format_on_save = {
 			lsp_fallback = true,
