@@ -15,7 +15,13 @@ return {
 		end)
 
 		for i = 1, 10 do
-			vim.keymap.set("n", tostring(i), function()
+			local k
+			if i < 10 then
+				k = tostring(i)
+			else
+				k = "0"
+			end
+			vim.keymap.set("n", k, function()
 				harpoon:list():select(i)
 				vim.api.nvim_feedkeys("zz", "n", false)
 			end)
