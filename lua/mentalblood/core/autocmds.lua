@@ -6,7 +6,6 @@ vim.api.nvim_create_autocmd({ "CmdlineLeave" }, {
 	end,
 	nested = true,
 })
--- vim.api.nvim_create_autocmd({ "CursorMoved" }, { pattern = "*", command = "norm zz", nested = true })
 vim.api.nvim_create_autocmd(
 	{ "BufWritePost", "BufEnter" },
 	{ pattern = "*", command = "set nofoldenable foldmethod=manual foldlevelstart=99" }
