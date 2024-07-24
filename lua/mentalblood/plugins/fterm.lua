@@ -5,7 +5,7 @@ return {
 		local opts = { noremap = true, silent = true }
 		local fterm = require("FTerm")
 		fterm.setup({
-			cmd = "powershell.exe",
+			cmd = os.getenv("SHELL") or "powershell.exe",
 			dimensions = {
 				height = 1.0,
 				width = 1.0,
