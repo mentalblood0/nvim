@@ -4,9 +4,8 @@ return {
 	config = function()
 		local dapui = require("dapui")
 		dapui.setup()
-
-		local keymap = vim.keymap
-		local opts = { noremap = true, silent = true }
-		keymap.set("n", "<A-d>", dapui.toggle, opts)
+		vim.keymap.set("n", "<leader>dt", dapui.toggle, {
+			desc = "Toggle DAP UI",
+		})
 	end,
 }
