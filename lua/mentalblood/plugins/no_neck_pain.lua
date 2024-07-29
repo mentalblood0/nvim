@@ -1,8 +1,8 @@
 return {
 	"shortcuts/no-neck-pain.nvim",
 	config = function()
-		local no_neck_pain = require("no-neck-pain")
-		no_neck_pain.setup({
+		local nnp = require("no-neck-pain")
+		nnp.setup({
 			width = 124,
 			autocmds = {
 				enableOnVimEnter = true,
