@@ -45,7 +45,7 @@ return {
 		})
 
 		local nnp = require("no-neck-pain")
-		vim.keymap.set("n", "<leader>dt", function()
+		vim.keymap.set("n", "<leader>dd", function()
 			nnp.toggle()
 			dapui.toggle()
 		end, {

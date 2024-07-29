@@ -9,6 +9,12 @@ return {
 		vim.keymap.set("n", "<F5>", dap.continue, {
 			desc = "Continue",
 		})
+		vim.keymap.set("n", "<leader>dr", dap.restart, {
+			desc = "Restart",
+		})
+		vim.keymap.set("n", "<leader>dt", dap.terminate, {
+			desc = "Terminate",
+		})
 		vim.keymap.set("n", "<F10>", dap.step_over, {
 			desc = "Step into",
 		})
@@ -29,7 +35,6 @@ return {
 			command = "gdb",
 			args = { "-i", "dap" },
 		}
-		port = 13000
 		dap.adapters.codelldb = {
 			type = "server",
 			port = "${port}",
