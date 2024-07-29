@@ -12,6 +12,15 @@ return {
 		vim.keymap.set("n", "<leader>dt", dap.terminate, {
 			desc = "Terminate",
 		})
+		vim.keymap.set("n", "<leader>dsj", dap.down, {
+			desc = "Go down on stack",
+		})
+		vim.keymap.set("n", "<leader>dsk", dap.up, {
+			desc = "Go up on stack",
+		})
+		vim.keymap.set("n", "<leader>dc", dap.run_to_cursor, {
+			desc = "Run to cursor",
+		})
 		vim.keymap.set("n", "<F10>", dap.step_over, {
 			desc = "Step into",
 		})
