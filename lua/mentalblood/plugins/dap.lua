@@ -3,9 +3,6 @@ return {
 	config = function()
 		local dap = require("dap")
 
-		vim.keymap.set("n", "<F9>", dap.toggle_breakpoint, {
-			desc = "Toggle breakpoint",
-		})
 		vim.keymap.set("n", "<F5>", dap.continue, {
 			desc = "Continue",
 		})
