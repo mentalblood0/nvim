@@ -3,16 +3,16 @@ return {
 	config = function()
 		local dap = require("dap")
 
-		vim.keymap.set("n", "<leader>db", dap.toggle_breakpoint, {
+		vim.keymap.set("n", "<F9>", dap.toggle_breakpoint, {
 			desc = "Toggle breakpoint",
 		})
-		vim.keymap.set("n", "<leader>dc", dap.continue, {
+		vim.keymap.set("n", "<F5>", dap.continue, {
 			desc = "Continue",
 		})
-		vim.keymap.set("n", "<leader>ds", dap.step_over, {
+		vim.keymap.set("n", "<F10>", dap.step_over, {
 			desc = "Step into",
 		})
-		vim.keymap.set("n", "<leader>dn", dap.step_into, {
+		vim.keymap.set("n", "<F11>", dap.step_into, {
 			desc = "Step over",
 		})
 
