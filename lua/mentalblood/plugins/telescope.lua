@@ -4,6 +4,7 @@ return {
 		"nvim-lua/plenary.nvim",
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 		"nvim-tree/nvim-web-devicons",
+		"nvim-telescope/telescope-dap.nvim",
 	},
 	config = function()
 		local telescope = require("telescope")
@@ -34,6 +35,7 @@ return {
 		})
 
 		telescope.load_extension("fzf")
+		telescope.load_extension("dap")
 
 		local keymap = vim.keymap
 
@@ -59,7 +61,7 @@ return {
 		)
 		keymap.set(
 			"n",
-			"<leader>fd",
+			"<leader>ff",
 			"<cmd>Telescope current_buffer_fuzzy_find<cr>",
 			{ desc = "Find string in current buffer" }
 		)
@@ -97,6 +99,10 @@ return {
 		keymap.set("n", "<leader>ft", "<cmd>Telescope colorscheme<cr>", { desc = "Find colorscheme" })
 		keymap.set("n", "<leader>fe", "<cmd>Telescope diagnostics<cr>", { desc = "Find diagnostics" })
 		keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find buffers" })
+		keymap.set("n", "<leader>fp", "<cmd>Telescope resume<cr>", { desc = "Resume" })
+		keymap.set("n", "<leader>fdb", "<cmd>Telescope dap list_breakpoints<cr>", { desc = "Find breakpoints" })
+		keymap.set("n", "<leader>fdv", "<cmd>Telescope dap variables<cr>", { desc = "Find variables" })
+		keymap.set("n", "<leader>fdf", "<cmd>Telescope dap frames<cr>", { desc = "Find frames" })
 
 		local file_exists = function(file)
 			local f = io.open(file, "rb")
@@ -140,6 +146,6 @@ return {
 
 			vim.cmd.edit(initial)
 		end
-		keymap.set("n", "<leader>ff", add_files_to_buffers, { desc = "Add all files to buffers" })
+		keymap.set("n", "<leader>fF", add_files_to_buffers, { desc = "Add all files to buffers" })
 	end,
 }

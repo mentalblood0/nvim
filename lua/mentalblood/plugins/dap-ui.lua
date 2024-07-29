@@ -4,6 +4,8 @@ return {
 	config = function()
 		local dapui = require("dapui")
 		dapui.setup({
+			mappings = {},
+			controls = { element = "repl", enabled = false },
 			layouts = {
 				{
 					elements = {
