@@ -1,6 +1,6 @@
 -- Lua
 return {
-	"ahmedkhalf/project.nvim",
+	"https://codeberg.org/mentalblood/project.nvim",
 	config = function()
 		require("project_nvim").setup({})
 	end,

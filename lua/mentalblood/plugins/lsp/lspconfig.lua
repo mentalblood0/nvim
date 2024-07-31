@@ -1,9 +1,9 @@
 return {
-	"neovim/nvim-lspconfig",
+	"https://codeberg.org/mentalblood/nvim-lspconfig",
 	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
-		"hrsh7th/cmp-nvim-lsp",
-		{ "antosha417/nvim-lsp-file-operations", config = true },
+		"https://codeberg.org/mentalblood/cmp-nvim-lsp",
+		{ "https://codeberg.org/mentalblood/nvim-lsp-file-operations", config = true },
 	},
 	config = function()
 		local lspconfig = require("lspconfig")

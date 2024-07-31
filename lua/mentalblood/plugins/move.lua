@@ -1,5 +1,5 @@
 return {
-	"fedepujol/move.nvim",
+	"https://codeberg.org/mentalblood/move.nvim",
 	config = function()
 		local opts = { noremap = true, silent = true }
 

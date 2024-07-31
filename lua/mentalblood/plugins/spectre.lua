@@ -1,5 +1,5 @@
 return {
-	"nvim-pack/nvim-spectre",
+	"https://codeberg.org/mentalblood/nvim-spectre",
 	pin = true,
 	keys = {
 		{ "<leader>f.", "<cmd>SpectreWithCWD<cr>", mode = { "n" } },

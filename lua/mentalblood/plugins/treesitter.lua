@@ -1,5 +1,5 @@
 return {
-	"nvim-treesitter/nvim-treesitter",
+	"https://codeberg.org/mentalblood/nvim-treesitter",
 	config = function()
 		local ts = require("nvim-treesitter.configs")
 		ts.setup({

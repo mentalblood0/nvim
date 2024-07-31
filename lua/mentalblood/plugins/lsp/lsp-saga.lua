@@ -1,8 +1,8 @@
 return {
-	"nvimdev/lspsaga.nvim",
+	"https://codeberg.org/mentalblood/lspsaga.nvim",
 	dependencies = {
-		-- "nvim-treesitter/nvim-treesitter",
-		"nvim-tree/nvim-web-devicons",
+		-- "https://codeberg.org/mentalblood/nvim-treesitter",
+		"https://codeberg.org/mentalblood/nvim-web-devicons",
 	},
 	config = function()
 		require("lspsaga").setup({

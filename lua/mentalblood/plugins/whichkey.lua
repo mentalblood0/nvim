@@ -1,3 +1,3 @@
 return {
-	"folke/which-key.nvim",
+	"https://codeberg.org/mentalblood/which-key.nvim",
 }

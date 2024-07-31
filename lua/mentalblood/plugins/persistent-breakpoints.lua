@@ -1,5 +1,5 @@
 return {
-	"Weissle/persistent-breakpoints.nvim",
+	"https://codeberg.org/mentalblood/persistent-breakpoints.nvim",
 	config = function()
 		local pb = require("persistent-breakpoints")
 		pb.setup({ load_breakpoints_event = "BufReadPost" })

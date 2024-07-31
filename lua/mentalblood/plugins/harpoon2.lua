@@ -1,7 +1,7 @@
 return {
-	"ThePrimeagen/harpoon",
+	"https://codeberg.org/mentalblood/harpoon",
 	branch = "harpoon2",
-	dependencies = { "nvim-lua/plenary.nvim" },
+	dependencies = { "https://codeberg.org/mentalblood/plenary.nvim" },
 	config = function()
 		local harpoon = require("harpoon")
 

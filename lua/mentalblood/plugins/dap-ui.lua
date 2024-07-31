@@ -1,6 +1,6 @@
 return {
-	"rcarriga/nvim-dap-ui",
-	dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
+	"https://codeberg.org/mentalblood/nvim-dap-ui",
+	dependencies = { "https://codeberg.org/mentalblood/nvim-dap", "https://codeberg.org/mentalblood/nvim-nio" },
 	config = function()
 		local dapui = require("dapui")
 		dapui.setup({

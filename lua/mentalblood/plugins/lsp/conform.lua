@@ -1,5 +1,5 @@
 return {
-	"stevearc/conform.nvim",
+	"https://codeberg.org/mentalblood/conform.nvim",
 	opts = {
 		formatters_by_ft = {
 			lua = { "stylua" },

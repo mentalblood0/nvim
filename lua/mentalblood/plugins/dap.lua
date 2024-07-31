@@ -1,5 +1,5 @@
 return {
-	"mfussenegger/nvim-dap",
+	"https://codeberg.org/mentalblood/nvim-dap",
 	config = function()
 		local dap = require("dap")
 

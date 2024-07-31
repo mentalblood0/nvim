@@ -1,9 +1,9 @@
 return {
-	"utilyre/barbecue.nvim",
+	"https://codeberg.org/mentalblood/barbecue.nvim",
 	name = "barbecue",
 	version = "*",
 	dependencies = {
-		"SmiteshP/nvim-navic",
+		"https://codeberg.org/mentalblood/nvim-navic",
 	},
 	opts = {
 		-- configurations go here

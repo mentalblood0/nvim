@@ -1,7 +1,7 @@
 return {
-	"AckslD/nvim-neoclip.lua",
+	"https://codeberg.org/mentalblood/nvim-neoclip.lua",
 	requires = {
-		{ "nvim-telescope/telescope.nvim" },
+		{ "https://codeberg.org/mentalblood/telescope.nvim" },
 		config = function()
 			require("neoclip").setup()
 		end,

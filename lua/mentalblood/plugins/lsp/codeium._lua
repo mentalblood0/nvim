@@ -1,5 +1,5 @@
 return {
-	"Exafunction/codeium.vim",
+	"https://codeberg.org/mentalblood/codeium.vim",
 	config = function()
 		-- local codeium = require("codeium")
 		-- codeium.setup({ detect_proxy = true })

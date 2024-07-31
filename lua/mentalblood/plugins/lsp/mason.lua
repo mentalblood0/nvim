@@ -1,8 +1,8 @@
 return {
-	"williamboman/mason.nvim",
+	"https://codeberg.org/mentalblood/mason.nvim",
 	dependencies = {
-		"williamboman/mason-lspconfig.nvim",
-		"WhoIsSethDaniel/mason-tool-installer.nvim",
+		"https://codeberg.org/mentalblood/mason-lspconfig.nvim",
+		"https://codeberg.org/mentalblood/mason-tool-installer.nvim",
 	},
 	config = function()
 		local mason = require("mason")

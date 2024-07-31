@@ -1,10 +1,10 @@
 return {
-	"nvim-telescope/telescope.nvim",
+	"https://codeberg.org/mentalblood/telescope.nvim",
 	dependencies = {
-		"nvim-lua/plenary.nvim",
-		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
-		"nvim-tree/nvim-web-devicons",
-		"nvim-telescope/telescope-dap.nvim",
+		"https://codeberg.org/mentalblood/plenary.nvim",
+		{ "https://codeberg.org/mentalblood/telescope-fzf-native.nvim", build = "make" },
+		"https://codeberg.org/mentalblood/nvim-web-devicons",
+		"https://codeberg.org/mentalblood/telescope-dap.nvim",
 	},
 	config = function()
 		local telescope = require("telescope")
