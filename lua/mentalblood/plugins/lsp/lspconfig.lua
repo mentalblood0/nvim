@@ -68,16 +68,6 @@ return {
 			filetypes = { "html", "ejs" },
 		})
 
-		lspconfig["tsserver"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-			init_options = {
-				preferences = {
-					disableSuggestions = true,
-				},
-			},
-		})
-
 		lspconfig["cssls"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
@@ -93,6 +83,7 @@ return {
 			capabilities = capabilities,
 			on_attach = on_attach,
 			filetypes = { "python" },
+			settings = { python = { pythonPath = vim.fn.exepath("python") } },
 		})
 
 		lspconfig["graphql"].setup({
