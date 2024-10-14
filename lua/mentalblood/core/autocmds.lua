@@ -18,5 +18,6 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 	callback = function()
 		vim.cmd("silent !~/.nimble/bin/nph %")
 		vim.cmd("edit")
+		vim.cmd("normal zz")
 	end,
 })
