@@ -6,10 +6,8 @@ vim.api.nvim_create_autocmd({ "CmdlineLeave" }, {
 	nested = true,
 })
 
-vim.api.nvim_create_augroup("AutoFormat", {})
 vim.api.nvim_create_autocmd("BufWritePre", {
 	pattern = "*",
-	group = "AutoFormat",
 	callback = function()
 		if vim.bo.filetype == "nim" then
 			vim.cmd("silent Neoformat nph")
