@@ -1,6 +1,6 @@
 return {
-	"https://codeberg.org/mentalblood/nvim-dap-virtual-text",
-	dependencies = { "https://codeberg.org/mentalblood/nvim-treesitter" },
+	"theHamsta/nvim-dap-virtual-text",
+	dependencies = { "nvim-treesitter/nvim-treesitter" },
 	config = function()
 		local vt = require("nvim-dap-virtual-text")
 		vt.setup()

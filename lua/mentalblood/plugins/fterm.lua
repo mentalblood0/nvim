@@ -1,5 +1,5 @@
 return {
-	"https://codeberg.org/mentalblood/FTerm.nvim",
+	"numToStr/FTerm.nvim",
 	config = function()
 		local keymap = vim.keymap
 		local opts = { noremap = true, silent = true }

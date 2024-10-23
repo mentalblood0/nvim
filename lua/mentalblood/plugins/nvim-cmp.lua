@@ -1,10 +1,10 @@
 return {
-	"https://codeberg.org/mentalblood/nvim-cmp",
+	"hrsh7th/nvim-cmp",
 	event = "InsertEnter",
 	dependencies = {
-		"https://codeberg.org/mentalblood/cmp-buffer",
-		"https://codeberg.org/mentalblood/cmp-path",
-		"https://codeberg.org/mentalblood/lspkind.nvim",
+		"hrsh7th/cmp-buffer",
+		"hrsh7th/cmp-path",
+		"onsails/lspkind.nvim",
 	},
 	config = function()
 		local cmp = require("cmp")

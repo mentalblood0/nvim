@@ -1,5 +1,5 @@
 return {
-	"https://codeberg.org/mentalblood/Comment.nvim",
+	"numToStr/Comment.nvim",
 	event = { "BufReadPre", "BufNewFile" },
 	config = true,
 }

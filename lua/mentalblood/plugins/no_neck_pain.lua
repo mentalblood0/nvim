@@ -1,11 +1,11 @@
 return {
-	"https://codeberg.org/mentalblood/no-neck-pain.nvim",
+	"shortcuts/no-neck-pain.nvim",
 	config = function()
 		local nnp = require("no-neck-pain")
 		nnp.setup({
 			width = 124,
 			autocmds = {
-				enableOnVimEnter = true,
+				enableOnVimEnter = false,
 			},
 			mappings = {
 				enabled = true,

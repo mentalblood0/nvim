@@ -1,4 +1,3 @@
-vim.api.nvim_create_autocmd({ "BufLeave" }, { pattern = "*", command = "wa", nested = true })
 vim.api.nvim_create_autocmd({ "CmdlineLeave" }, {
 	pattern = "*",
 	callback = function()
@@ -6,18 +5,23 @@ vim.api.nvim_create_autocmd({ "CmdlineLeave" }, {
 	end,
 	nested = true,
 })
-vim.api.nvim_create_autocmd(
-	{ "BufWritePost", "BufEnter" },
-	{ pattern = "*", command = "set nofoldenable foldmethod=manual foldlevelstart=99" }
-)
 
 vim.api.nvim_create_augroup("AutoFormat", {})
-vim.api.nvim_create_autocmd("BufWritePost", {
+vim.api.nvim_create_autocmd("BufWritePre", {
 	pattern = "*.nim",
 	group = "AutoFormat",
 	callback = function()
-		vim.cmd("silent !~/.nimble/bin/nph %")
-		vim.cmd("edit")
-		vim.cmd("normal zz")
+		if vim.bo.filetype == "lua" then
+			vim.cmd("silent Neoformat nph")
+		else
+			vim.cmd("silent Neoformat")
+		end
+	end,
+})
+vim.api.nvim_create_autocmd("BufWritePre", {
+	pattern = "*.lua",
+	group = "AutoFormat",
+	callback = function()
+		vim.cmd("silent Neoformat")
 	end,
 })

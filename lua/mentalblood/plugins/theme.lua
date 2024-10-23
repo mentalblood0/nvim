@@ -1,5 +1,5 @@
 return {
-	"https://codeberg.org/mentalblood/everforest-nvim",
+	"neanias/everforest-nvim",
 	config = function()
 		local theme = require("everforest")
 		theme.setup({

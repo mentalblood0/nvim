@@ -1,5 +1,5 @@
 return {
-	"https://codeberg.org/mentalblood/mason-nvim-dap.nvim",
+	"jay-babu/mason-nvim-dap.nvim",
 	config = function()
 		local masondap = require("mason-nvim-dap")
 		masondap.setup({

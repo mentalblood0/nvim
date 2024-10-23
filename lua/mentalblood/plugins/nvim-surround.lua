@@ -1,5 +1,5 @@
 return {
-	"https://codeberg.org/mentalblood/nvim-surround",
+	"kylechui/nvim-surround",
 	event = { "BufReadPre", "BufNewFile" },
 	version = "*",
 	config = true,

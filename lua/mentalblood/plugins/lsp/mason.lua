@@ -1,8 +1,8 @@
 return {
-	"https://codeberg.org/mentalblood/mason.nvim",
+	"williamboman/mason.nvim",
 	dependencies = {
-		"https://codeberg.org/mentalblood/mason-lspconfig.nvim",
-		"https://codeberg.org/mentalblood/mason-tool-installer.nvim",
+		"williamboman/mason-lspconfig.nvim",
+		"WhoIsSethDaniel/mason-tool-installer.nvim",
 	},
 	config = function()
 		local mason = require("mason")
@@ -21,14 +21,8 @@ return {
 
 		mason_lspconfig.setup({
 			ensure_installed = {
-				-- "tsserver",
-				-- "html",
-				-- "cssls",
-				-- "lua_ls",
-				-- "emmet_ls",
-				-- "pyright",
-				-- "graphql",
-				-- "clangd",
+				"lua_ls",
+				"clangd",
 			},
 			automatic_installation = true,
 		})
